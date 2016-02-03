@@ -27,3 +27,5 @@ Just run:
 ```
 npm run build
 ```
+
+And your site should be readily available in the `public` folder.
