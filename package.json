@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "dev": "concurrent 'npm run dev:webpack' 'npm run dev:livereload' 'npm run dev:watch:jade'",
-    "dev:webpack": "webpack-dev-server --content-base ./public --inline",
+    "dev": "mkdirp public && npm run build:jade && concurrent 'npm run dev:webpack' 'npm run dev:livereload' 'npm run dev:watch:jade'",
+    "dev:webpack": "webpack-dev-server --content-base ./public --config ./webpack.dev.config.js --inline",
     "dev:livereload": "livereload public",
     "dev:watch:jade": "chokidar 'src/index.jade' -c 'npm run build:jade'",
-    "build": "rm -rf public && NODE_ENV=production webpack && npm run build:jade",
+    "build": "rm -rf public && webpack && NODE_ENV=production npm run build:jade",
     "build:jade": "node build-html"
   },
   "devDependencies": {
@@ -17,6 +17,7 @@
     "less": "^2.6.0",
     "less-loader": "^2.2.2",
     "livereload": "^0.4.1",
+    "mkdirp": "^0.5.1",
     "style-loader": "^0.13.0",
     "ts-loader": "^0.8.0",
     "tsd": "^0.6.5",
@@ -24,5 +25,8 @@
     "webpack": "^1.12.12",
     "webpack-dev-server": "^1.14.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^3.0.3",
+    "object-assign": "^4.0.1"
+  }
 }

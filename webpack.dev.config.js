@@ -3,7 +3,7 @@ const config = require('./webpack.default.js');
 const objectAssign = require('object-assign');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = objectAssign({}, config);
+module.exports = objectAssign({}, { devtool: '#source-map' }, config);
 
 // module.exports = {
 //   entry: './src/ts/entry.ts',
