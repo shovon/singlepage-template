@@ -1,3 +1,4 @@
 src/typings
 node_modules
 public/bundle.js
+ts/*.js
