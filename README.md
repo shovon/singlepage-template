@@ -1,6 +1,6 @@
 # Single Page Template
 
-A barebones starter project for creating single page websites, with load time in mind.
+A barebones starter project for creating single page websites, with load time and [developer experience](http://nordicapis.com/why-api-developer-experience-matters-more-than-ever/) in mind.
 
 ## Getting started
 
