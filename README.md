@@ -18,6 +18,8 @@ Just run:
 npm run dev
 ```
 
+And then, edit the content of the `src` folder to your heart's content.
+
 ## Distributing
 
 Just run:
