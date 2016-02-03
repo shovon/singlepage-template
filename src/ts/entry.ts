@@ -1,5 +1,5 @@
-/// <reference path='./typings/tsd.d.ts' />
+/// <reference path='../typings/tsd.d.ts' />
 
-require('./style.css');
+require('../styles/style.less');
 
-console.log('Hello, Universe!');
+console.log('Hello, World!');
